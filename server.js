@@ -20,7 +20,11 @@ const {
 const base = "https://api-m.sandbox.paypal.com";
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "www.muyargento.com",
+  })
+);
 
 // parse post params sent in body in json format
 app.use(express.json());
